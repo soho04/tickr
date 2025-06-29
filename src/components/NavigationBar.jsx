@@ -4,6 +4,10 @@ import { TbLayoutSidebarLeftCollapse, TbLayoutSidebarLeftExpand } from 'react-ic
 import { MdSpaceDashboard } from "react-icons/md"; // <MdSpaceDashboard />
 import { GoGraph } from "react-icons/go"; // <GoGraph />
 import { IoIosMenu } from "react-icons/io";
+<<<<<<< HEAD
+=======
+
+>>>>>>> 027ef37 (first commit)
 
 const NavigationBar = () => {
     
