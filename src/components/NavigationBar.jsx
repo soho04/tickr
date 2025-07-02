@@ -6,10 +6,9 @@ import { GoGraph } from "react-icons/go"; // <GoGraph />
 import { IoNewspaperOutline } from "react-icons/io5";
 import palantirLogo from '../assets/palantir-svgrepo-com.svg';
 
-const NavigationBar = () => {
+const NavigationBar = ({ open, setOpen }) => {
     
-    const [open, setOpen] = useState(true);
-    const [subMenus, setSubMenus] = useState({
+  const [subMenus, setSubMenus] = useState({
         calendar: false,
         support: false,
         tables: false,

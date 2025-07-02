@@ -25,6 +25,48 @@ export const StatCards = () => {
         trend="up"
         period="Previous 365 days"
       />
+      <Card
+        title="Trailing Year"
+        value="$278,054.24"
+        pillText="60.75%"
+        trend="up"
+        period="Previous 365 days"
+      />
+      <Card
+        title="Trailing Year"
+        value="$278,054.24"
+        pillText="60.75%"
+        trend="up"
+        period="Previous 365 days"
+      />
+      <Card
+        title="Trailing Year"
+        value="$278,054.24"
+        pillText="60.75%"
+        trend="up"
+        period="Previous 365 days"
+      />
+      <Card
+        title="Trailing Year"
+        value="$278,054.24"
+        pillText="60.75%"
+        trend="up"
+        period="Previous 365 days"
+      />
+      <Card
+        title="Trailing Year"
+        value="$278,054.24"
+        pillText="60.75%"
+        trend="up"
+        period="Previous 365 days"
+      />
+      <Card
+        title="Trailing Year"
+        value="$278,054.24"
+        pillText="60.75%"
+        trend="up"
+        period="Previous 365 days"
+      />
     </>
   );
 };
