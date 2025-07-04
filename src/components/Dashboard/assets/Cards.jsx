@@ -4,94 +4,42 @@ import { FiTrendingDown, FiTrendingUp } from "react-icons/fi";
 export const StatCards = () => {
   return (
     <>
-      <Card
-        title="Gross Revenue"
-        value="$120,054.24"
-        pillText="2.75%"
-        trend="up"
-        period="From Jan 1st - Jul 31st"
-      />
-      <Card
-        title="Avg Order"
-        value="$27.97"
-        pillText="1.01%"
-        trend="down"
-        period="From Jan 1st - Jul 31st"
-      />
-      <Card
-        title="Trailing Year"
-        value="$278,054.24"
-        pillText="60.75%"
-        trend="up"
-        period="Previous 365 days"
-      />
-      <Card
-        title="Trailing Year"
-        value="$278,054.24"
-        pillText="60.75%"
-        trend="up"
-        period="Previous 365 days"
-      />
-      <Card
-        title="Trailing Year"
-        value="$278,054.24"
-        pillText="60.75%"
-        trend="up"
-        period="Previous 365 days"
-      />
-      <Card
-        title="Trailing Year"
-        value="$278,054.24"
-        pillText="60.75%"
-        trend="up"
-        period="Previous 365 days"
-      />
-      <Card
-        title="Trailing Year"
-        value="$278,054.24"
-        pillText="60.75%"
-        trend="up"
-        period="Previous 365 days"
-      />
-      <Card
-        title="Trailing Year"
-        value="$278,054.24"
-        pillText="60.75%"
-        trend="up"
-        period="Previous 365 days"
-      />
-      <Card
-        title="Trailing Year"
-        value="$278,054.24"
-        pillText="60.75%"
-        trend="up"
-        period="Previous 365 days"
-      />
+      <Card data={{
+        symbol: "AAPL",
+        date: "2023-10-01",
+        market_open: "$134.56",
+        market_close: "$135.67",
+        earnings: "$1.23/share",
+        volume: "1,234,567",
+        pe_ratio: "25.4",
+        market_cap: "$2.5T",
+        dividend_yield: "-",
+        _52_week_high: "$150.00",
+        _52_week_low: "$120.00",
+        beta: "1.2",
+        sector: "Technology",
+        
+      }} />     
     </>
   );
 };
 
-const Card = ({ title, value, pillText, trend, period }) => {
+const Card = ({ data }) => {
   return (
     <div className="col-span-4 p-4 rounded border border-stone-300 bg-white">
-      <div className="flex mb-8 items-start justify-between">
-        <div>
-          <h3 className="text-stone-500 mb-2 text-sm">{title}</h3>
-          <p className="text-3xl font-semibold">{value}</p>
-        </div>
+      {Object.entries(data).map(([key, value]) => {
+        const label = key
+          .replace(/_/g, " ")
+          .replace(/^_/, "")
+          .replace(/(\b\w)/g, c => c.toUpperCase()); 
 
-        <span
-          className={`text-xs flex items-center gap-1 font-medium px-2 py-1 rounded ${
-            trend === "up"
-              ? "bg-green-100 text-green-700"
-              : "bg-red-100 text-red-700"
-          }`}
-        >
-          {trend === "up" ? <FiTrendingUp /> : <FiTrendingDown />} {pillText}
-        </span>
-      </div>
-
-      <p className="text-xs text-stone-500">{period}</p>
+        return (
+          <div key={key} className="flex justify-between">
+            <span className="font-medium">{label}:</span>
+            <span>{value}</span>
+          </div>
+        );
+      })}
     </div>
   );
 };
