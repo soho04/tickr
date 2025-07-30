@@ -9,11 +9,12 @@ function App() {
   const [open, setOpen] = useState(true);
 
   return (
-    
+    <>
     <div className="flex-1">
       <NavigationBar open={open} setOpen={setOpen} />
       <Dashboard open={open}/>
     </div>
+    </>
   );
 }
 

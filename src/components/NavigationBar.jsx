@@ -5,6 +5,8 @@ import { MdSpaceDashboard } from "react-icons/md"; // <MdSpaceDashboard />
 import { GoGraph } from "react-icons/go"; // <GoGraph />
 import { IoNewspaperOutline } from "react-icons/io5";
 import palantirLogo from '../assets/palantir-svgrepo-com.svg';
+import { Link, useLocation } from 'react-router-dom';
+
 
 const NavigationBar = ({ open, setOpen }) => {
     
@@ -22,9 +24,9 @@ const NavigationBar = ({ open, setOpen }) => {
   };
 
     const Menus = [
-        { title: "Dashboard", icon: <MdSpaceDashboard /> },
-        { title: "Analytics", icon: <GoGraph /> },
-        { title: "Qualitative", icon: <IoNewspaperOutline/>  },
+        { title: "Dashboard", icon: <MdSpaceDashboard />, to: "/"},
+        { title: "Analytics", icon: <GoGraph />, to: "/analytics"},
+        { title: "Qualitative", icon: <IoNewspaperOutline/>, to: "/qualitative"},
     ];
 
     return (
