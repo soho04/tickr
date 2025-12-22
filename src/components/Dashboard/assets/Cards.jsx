@@ -26,7 +26,7 @@ export const StatCards = () => {
 
 const Card = ({ data }) => {
   return (
-    <div className="col-span-4 p-4 rounded border border-[#4a4a4a] bg-[#1e1f23]">
+    <div className="col-span-4 p-4 rounded border-0 ">
       {Object.entries(data).map(([key, value]) => {
         const label = key
           .replace(/_/g, " ")
@@ -44,4 +44,4 @@ const Card = ({ data }) => {
   );
 };
 
-export default Card;
+export default Card
