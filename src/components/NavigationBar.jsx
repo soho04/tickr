@@ -32,7 +32,7 @@ const NavigationBar = ({ open, setOpen }) => {
     return (
     <div className="w-full flex">
       {/* Sidebar section */}
-      <div className={`${open ? "w-72 p-5" : "w-20 p-4"} fixed z-60 bg-zinc-900 h-screen pt-8 duration-300 ease-in-out`}>
+      <div className={`${open ? "w-72 p-5" : "w-20 p-4"} fixed z-60 bg-[#1e1f23] h-screen pt-8 duration-300 ease-in-out`}>
         {/* Toggle button sections */}
         <div className={`absolute cursor-pointer -right-4 top-9 w-8 h-8 p-0.5 bg-zinc-50 border-zinc-50 border-2 rounded-full text-xl flex items-center justify-center ${!open && "rotate-180"} transition-all ease-in-out duration-300`}
           onClick={() => setOpen(!open)}

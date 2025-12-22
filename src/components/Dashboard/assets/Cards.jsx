@@ -11,13 +11,13 @@ export const StatCards = () => {
         market_close: "$135.67",
         earnings: "$1.23/share",
         volume: "1,234,567",
-        pe_ratio: "25.4",
-        market_cap: "$2.5T",
-        dividend_yield: "-",
-        _52_week_high: "$150.00",
-        _52_week_low: "$120.00",
-        beta: "1.2",
-        sector: "Technology",
+        // pe_ratio: "25.4",
+        // market_cap: "$2.5T",
+        // dividend_yield: "-",
+        // _52_week_high: "$150.00",
+        // _52_week_low: "$120.00",
+        // beta: "1.2",
+        // sector: "Technology",
         
       }} />     
     </>
@@ -26,7 +26,7 @@ export const StatCards = () => {
 
 const Card = ({ data }) => {
   return (
-    <div className="col-span-4 p-4 rounded border border-stone-300 bg-white">
+    <div className="col-span-4 p-4 rounded border border-[#4a4a4a] bg-[#1e1f23]">
       {Object.entries(data).map(([key, value]) => {
         const label = key
           .replace(/_/g, " ")
@@ -35,8 +35,8 @@ const Card = ({ data }) => {
 
         return (
           <div key={key} className="flex justify-between">
-            <span className="font-medium">{label}:</span>
-            <span>{value}</span>
+            <span className="font-medium text-white">{label}:</span>
+            <span className = "text-white">{value}</span>
           </div>
         );
       })}
